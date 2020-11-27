@@ -27,16 +27,16 @@
     <form asp-action="PersonaAdd" method="post">
   <div class="form-group">
     <label asp-for="nombre" for="exampleFormControlInput1">Nombre</label>
-    <input asp-for="nombre" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+    <input asp-for="nombre" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Nombre" required/>
   </div>
   <div class="form-group">
     <label asp-for="arcana.nombre" for="exampleFormControlSelect2">Arcana</label>
-    <select asp-for="arcana.nombre" multiple class="form-control" id="excmpleFormControlSelect2">
+    <select asp-for="arcana.nombre" multiple class="form-control" id="excmpleFormControlSelect2" required>
         @foreach (var arcana in arcanas)
                 {
                     <option>@arcana.nombre</option>
                 }
-    </select>
+    </select >
   </div>
   <div class="form-group">
     <label asp-for="nivel" for="formControlRange">Nivel</label>
@@ -45,27 +45,27 @@
   }
         </script>
 <input asp-for="nivel" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
-<input asp-for="nivel" type="text" id="textInput" value="">
+<input asp-for="nivel" type="text" id="textInput" value="" required/>
   </div>
   <div class="form-group">
     <label asp-for="fuerza" for="exampleFormControlInput1">Fuerza</label>
-    <input asp-for="fuerza" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99">
+    <input asp-for="fuerza" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99" required/>
   </div>
   <div class="form-group">
     <label asp-for="magia" for="exampleFormControlInput1">Magia</label>
-    <input asp-for="magia" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99">
+    <input asp-for="magia" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99" required/>
   </div>
   <div class="form-group">
     <label asp-for="aguante" for="exampleFormControlInput1">Aguante</label>
-    <input asp-for="aguante" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99">
+    <input asp-for="aguante" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99" required/>
   </div>
   <div class="form-group">
     <label asp-for="agilidad" for="exampleFormControlInput1">Agilidad</label>
-    <input asp-for="agilidad" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99">
+    <input asp-for="agilidad" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99" required/>
   </div>
   <div class="form-group">
     <label asp-for="suerte" for="exampleFormControlInput1">Suerte</label>
-    <input asp-for="suerte" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99">
+    <input asp-for="suerte" type="name" class="form-control" id="exampleFormControlInput1" placeholder="0-99" required/>
   </div>
         <button type="submit" class="btn btn-success">Añadir Persona</button>
         

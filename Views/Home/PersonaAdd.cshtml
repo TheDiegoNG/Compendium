@@ -40,61 +40,53 @@
   </div>
   <div class="form-group">
     <label asp-for="nivel" for="formControlRange">Nivel</label>
-    <script> function updateTextInput(val) {
-    document.getElementById('textInput').value=val; 
-  }
+    <script> updateTextInput(val, id)
         </script>
-<input asp-for="nivel" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input asp-for="nivel" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'textInput');">
 <input asp-for="nivel" type="text" id="textInput" value="" required/>
   </div>
   <div class="form-group">
     <label asp-for="fuerza" for="formControlRange">Fuerza</label>
-    <script> function updateTextInput(val) {
-    document.getElementById('textInput2').value=val; 
-  }
+    <script> updateTextInput(val, id)
         </script>
-<input asp-for="fuerza" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input asp-for="fuerza" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'textInput2');">
 <input asp-for="fuerza" type="text" id="textInput2" value="" required/>
   </div>
   <div class="form-group">
     <label asp-for="magia" for="formControlRange">Magia</label>
-    <script> function updateTextInput(val) {
-    document.getElementById('textInput3').value=val; 
-  }
+    <script> updateTextInput(val, id) 
         </script>
-<input asp-for="magia" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input asp-for="magia" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'textInput3');">
 <input asp-for="magia" type="text" id="textInput3" value="" required/>
   </div>
   <div class="form-group">
     <label asp-for="aguante" for="formControlRange">Aguante</label>
-    <script> function updateTextInput(val) {
-    document.getElementById('textInput4').value=val; 
-  }
+    <script> updateTextInput(val, id)
         </script>
-<input asp-for="aguante" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input asp-for="aguante" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'textInput4');">
 <input asp-for="aguante" type="text" id="textInput4" value="" required/>
   </div>
   <div class="form-group">
     <label asp-for="agilidad" for="formControlRange">Agilidad</label>
-    <script> function updateTextInput(val) {
-    document.getElementById('textInput5').value=val; 
-  }
+    <script> updateTextInput(val, id)
         </script>
-<input asp-for="agilidad" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input asp-for="agilidad" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'textInput5');">
 <input asp-for="agilidad" type="text" id="textInput5" value="" required/>
   </div>
   <div class="form-group">
     <label asp-for="suerte" for="formControlRange">Suerte</label>
-    <script> function updateTextInput(val) {
-    document.getElementById('textInput6').value=val; 
-  }
+    <script> updateTextInput(val, id)
         </script>
-<input asp-for="suerte" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value);">
+<input asp-for="suerte" type="range" name="rangeInput" min="0" max="100" onchange="updateTextInput(this.value, 'textInput6');">
 <input asp-for="suerte" type="text" id="textInput6" value="" required/>
   </div>
         <button type="submit" class="btn btn-success">Añadir Persona</button>
         
 </form>
 </div>
+ <script> function updateTextInput(val, id) {
+    document.getElementById(id).value=val; 
+  }
+        </script>
 </body>
 </html>
